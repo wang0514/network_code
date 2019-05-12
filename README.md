@@ -10,3 +10,8 @@
    + IP地址，定位主机
    + 端口号，定位进程
    + IP + socket
+2. socket编程 --网络I/O
+   + 读写操作
+   + read/write
+      + 文件描述符号
+    
