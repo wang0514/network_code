@@ -37,7 +37,6 @@ void *handler(void* arg)
             printf("客户端断开了连接\n");
             close(info->fd);
             break;
-
         }
         else
         {
@@ -75,7 +74,7 @@ int main(int argc, char const *argv[])
         info[i].fd = -1;
     }
 
-    socklen_t clilent_len = sizeof(struct sockaddr_in);
+    socklen_t client_len = sizeof(struct sockaddr_in);
     while (1)
     {
         for(i = 0;i<sizeof(info)/sizeof(info[0]);++i)
@@ -89,7 +88,7 @@ int main(int argc, char const *argv[])
         {
             break;
         }
-        info[i].fd = accept(lfd,(struct sockaddr*)&info[i].addr,&clilent_len);
+        info[i].fd = accept(lfd,(struct sockaddr*)&info[i].addr,&client_len);
 
         //创建子线程
         pthread_create(&info[i].id,NULL,handler,&info[i]);
