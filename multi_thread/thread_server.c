@@ -60,9 +60,9 @@ int main(int argc, char const *argv[])
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
     servaddr.sin_port = htonl(atoi(argv[1]));
-    socklen_t serlen= sizeof(servaddr);
+    socklen_t ser_len= sizeof(servaddr);
 
-    bind(lfd,(struct sockaddr*)&servaddr,serlen);
+    bind(lfd,(struct sockaddr*)&servaddr,ser_len);
 
     listen(lfd,36);
     printf("start accept...\n");
