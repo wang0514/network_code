@@ -1,7 +1,4 @@
 //
-// Created by wangkaikai on 19-5-31.
-//
-//
 // Created by wangkaikai on 19-5-30.
 //
 #include <stdio.h>
